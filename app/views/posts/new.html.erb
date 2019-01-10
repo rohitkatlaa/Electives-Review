@@ -1,0 +1,18 @@
+  <div class="header">
+      <div class="container">
+        <h1>Create Post</h1>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="container">
+        
+        <!-- Form goes here -->
+	<%= form_for Post.new do |f| %>
+		<%= f.text_field :comments, :placeholder => "Share your thoughts"%>
+		<br>
+		<br>
+		<%= f.submit "Post", :class => "btn" %>
+	<% end %>
+      </div>
+    </div>

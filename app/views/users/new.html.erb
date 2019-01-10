@@ -1,0 +1,40 @@
+<div class="header">
+      <div class="container">
+        <h1>Create User</h1>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="container">
+        
+        <!-- Form goes here -->
+	<%= form_for @user do |f| %>
+		<% if @user.errors.any? %>
+			<h2>Form is invalid</h2>
+			<ul>
+			<% @user.errors.full_messages.each do |m| %>
+				<li><%= m %>
+			<% end %>
+			</ul>
+		<% end %>
+		<%= f.label :user_name, "User Name" %>
+		<br>
+		<%= f.text_field :user_name %>
+		<br>
+		<%= f.label :email %>
+                <br>
+                <%= f.text_field :email %>
+                <br>
+		<%= f.label :password %>
+                <br>
+                <%= f.password_field :password %>
+                <br>
+		<%= f.label :password_confirmation, "Password Confirmation" %>
+                <br>
+                <%= f.password_field :password_confirmation %>
+                <br>
+		<br>
+		<%= f.submit "Create", :class => "btn" %>
+	<% end %>
+      </div>
+    </div>

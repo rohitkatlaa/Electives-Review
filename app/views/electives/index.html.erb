@@ -1,0 +1,19 @@
+<div class="header">
+  <div class="container">
+    <h1>IIIT Bangalore Electives</h1>
+  </div>
+</div>
+
+<div class="container">
+	<%= link_to "Create an Elective" ,new_elective_path() %>
+	<ul class="list-group">
+		<% @electives.each do |e| %> 
+		<li class="list-group-item">
+		<p>Course Name: <%= e.course_name %></p>
+		<p>Course Instructor: <%= e.course_instructor_name %></p>
+		<%= link_to "Learn more", elective_path(e.id) %>
+		</li>
+		<br><br>
+	</ul>
+	<% end %>
+</div>

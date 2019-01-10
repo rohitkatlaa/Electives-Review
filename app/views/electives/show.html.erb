@@ -1,0 +1,69 @@
+<div class="header">
+  <div class="container">
+    <h1>IIIT Bangalore Electives</h1>
+  </div>
+</div>
+<div class="container">
+	<div id="mySidenav" class="sidenav">
+		 <button id="mybtn1" onclick="basic()">Intro</button>
+		 <button id="mybtn2" onclick="course_des()">Description</button>
+		 <button id="mybtn3" onclick="course_content()">Content</button>
+		 <button id="mybtn4" onclick="text_and_ref()">Text and Reference</button>
+		 <button id="mybtn5" onclick="syllabus()">Syllabus</button>
+		 <button id="mybtn6" onclick="notes()">Notes</button>
+		 <button id="mybtn7" onclick="assignments()">Assignments</button>
+		 <button id="mybtn8" onclick="projects()">Projects</button>
+	</div>
+		<br>
+		<div class="basic">
+                <p>Course Name: <%= @electives.course_name %></p>
+		<p>Course Instructor: <%= @electives.course_instructor_name %></p>
+		<p>Course Proposer Name: <%= @electives.course_proposer_name %></p>
+                <p>Course Instructor Name: <%= @electives.course_instructor_name %></p>
+                <p>Credits: <%= @electives.credits %></p>
+		<p>Semester: <%= @electives.semester %></p>
+		</div>
+		<div class="course_des">
+			<p>Course Description:<br><%= @electives.course_description %></p>
+		</div>
+		<div class="course_content">
+			<p>Course Content:<br> <%= @electives.course_content %></p>
+		</div>
+		<div class="text_and_ref">
+			<p>Text and Reference:<br> <%= @electives.text_and_references %>
+		</div>
+		<div class="syllabus">
+			<p>Syllabus: <br> <%= @electives.syllabus %>
+		</div>
+		<div class="notes">
+			<p>Notes:<br><%= @electives.notes_t %>
+		<br>
+		<%= link_to "Open File",  asset_path(@electives.notes) , :target => "_blank" %>
+		</div>
+		<div class="assignments">
+		<p>Assignments:<br><%= @electives.assignments_t %>
+                <br>
+		<%= link_to "Open File",  asset_path(@electives.assignments) , :target => "_blank" %>
+		</div>
+		<div class="projects">
+		<p>Projects:<br><%= @electives.projects_t %>
+                <br>
+		<%= link_to "Open File",  asset_path(@electives.projects) , :target => "_blank" %>
+		</div>
+		<br><br><br>
+		<%= link_to "edit",edit_elective_path(@electives.id) %>
+		&nbsp&nbsp
+		<%= link_to "delete", @elective, :confirm => "Are you sure to delete the current Elective?", :method => :delete %>
+		<br><br>
+		<%= link_to "Create Post", new_post_path(@electives.id) %>
+		<br>
+		<ul class="list-group">
+			<% @posts.each do |p| %>
+			  <li class="list-group-item">
+				  <%= p.comments %>
+			  </li>
+			  <br>
+		  <% end %>
+		</ul>
+</div>
+~      

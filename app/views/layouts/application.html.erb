@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ElectiveReview</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<% if current_user %>
+		<h5>Logged in as <%= current_user.user_name %></h5>
+	<ul class="nav justify-content-end">
+		<li class="nav-item">
+			<%= link_to "Create User ", new_user_path %>
+		</li>
+		&nbsp&nbsp&nbsp
+		<li class="nav-item">
+			<%= link_to " Log Out ", session_path("current"),method: "delete" %>
+		</li>
+		&nbsp&nbsp&nbsp
+		<li class="nav-item">
+			<%= link_to "Home", root_path %>
+		<li>
+		&nbsp&nbsp
+	</ul>
+	<% else %>
+	<ul class="nav justify-content-end">
+		<li class="nav-item">
+			<%= link_to "Create User ", new_user_path %>
+		</li>
+		&nbsp&nbsp&nbsp
+		<li class="nav-item">
+			<%= link_to " Login ", new_session_path %>
+		</li>
+		&nbsp&nbsp&nbsp
+                <li class="nav-item">
+                        <%= link_to "Home", root_path %>
+                <li>
+		&nbsp&nbsp
+	</ul>
+	<% end %>
+	<% flash.each do |name,msg| %>
+		<%= content_tag :div,msg, id: "flash_#(name)" %>
+	<% end %>
+	<br>
+	<%= yield %>
+
+</body>
+</html>

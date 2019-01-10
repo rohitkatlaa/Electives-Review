@@ -1,0 +1,48 @@
+#mySidenav button {
+  position: absolute;
+  right: -80px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 120px;
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  border-spacing: 2px;
+  border-radius:7px;
+}
+#mySidenav button:hover {
+  right: -10px;
+}
+#mybtn1 {
+  top: 80px;
+  background-color: #4CAF50;
+}
+#mybtn2 {
+  top: 140px;
+  background-color: #2196F3;
+}
+#mybtn3 {
+  top: 200px;
+  background-color: #f44336;
+}
+#mybtn4 {  
+  top: 260px;
+  background-color: #c3b90e;
+}
+#mybtn5 {
+  top: 343px;
+  background-color: #4CAF50;
+}
+#mybtn6 {
+  top: 403px;
+  background-color: #2196F3;
+}
+#mybtn7 {
+  top: 463px;
+  background-color: #f44336;
+}
+#mybtn8 {
+  top: 523px;
+  background-color: #c3b90e;
+}
+

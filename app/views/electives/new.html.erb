@@ -1,0 +1,71 @@
+  <div class="header">
+      <div class="container">
+        <h1>Create Elective</h1>
+      </div>
+  </div>
+  <div class="main">
+	  <div class="container">
+		  <%= form_for Elective.new, html: { multipart: true } do |f| %>
+			  <div class="form-group">
+			  <div class="custom-file mb-3">
+			  <%= f.label :course_name, 'Course Name' %>
+		  	  <br>
+			  <%= f.text_field :course_name,:class => "form-control" %>
+			  <br>
+			  <%= f.label :course_proposer_name, 'Course Proposer Name' %>
+			  <br>
+                          <%= f.text_field :course_proposer_name,:class => "form-control" %>
+			  <br>
+			  <%= f.label :course_instructor_name, 'Course Instructor Name' %>
+			  <br>
+                          <%= f.text_field :course_instructor_name,:class => "form-control" %>
+			  <br>
+			  <%= f.label :credits, 'Credits' %>
+			  <br>
+                          <%= f.text_field :credits,:class => "form-control" %>
+			  <br>
+			  <%= f.label :semester, 'Semester' %>
+			  <br>
+                          <%= f.text_field :semester,:class => "form-control" %>
+			  <br>
+			  <%= f.label :course_description, 'Course Description' %>
+			  <br>
+                          <%= f.text_field :course_description,:class => "form-control" %>
+			  <br>
+			  <%= f.label :course_content, 'Course Content' %>
+			  <br>
+                          <%= f.text_field :course_content,:class => "form-control" %>
+			  <br>
+			  <%= f.label :text_and_references, 'Text and References' %>
+  			  <br>
+                          <%= f.text_field :text_and_references,:class => "form-control" %>
+			  <br>
+                          <%= f.label :syllabus, 'Syllabus' %>
+                          <br>
+                          <%= f.text_field :syllabus,:class => "form-control" %>
+			  <br>
+			  <%= f.label :notes, 'Notes' %>
+			  <br>
+                          <%= f.text_field :notes_t ,:class => "form-control"%>
+			  <br>
+			  <%= f.file_field :notes %>
+			  <br>
+                          <%= f.label :assignments, 'Assignments' %>
+                          <br>
+                          <%= f.text_field :assignments_t ,:class => "form-control"%>
+                          <br>
+			  <%= f.file_field :assignments %>
+			  <br>
+                          <%= f.label :projects, 'Projects' %>
+                          <br>
+                          <%= f.text_field :projects_t ,:class => "form-control"%>
+                          <br>
+			  <%= f.file_field :projects %>
+			  <br>
+			  </div>
+			  </div>
+			  <%= f.submit "Create", :class => "btn" %>
+			  <br><br>
+		<% end %>
+	  </div>
+  </div>

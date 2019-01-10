@@ -1,0 +1,19 @@
+ <div class="header">
+      <div class="container">
+        <h1>Login</h1>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="container">
+        
+        <!-- Form goes here -->
+	<%= form_tag sessions_path do %>
+		<%= label_tag :user_name, "User Name" %><br>
+		<%= text_field_tag :user_name, params[:user_name] %><br>
+		<%= label_tag :password %><br>
+		<%= password_field_tag :password %><br><br>
+		<%= submit_tag "Login", :class => "btn" %>
+	<% end %>
+      </div>
+    </div>

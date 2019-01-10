@@ -1,0 +1,44 @@
+  <div class="header">
+      <div class="container">
+        <h1>Edit Elective</h1>
+      </div>
+  </div>
+  <div class="main">
+	  <div class="container">
+		  <%= form_for @electives do |f| %>
+			  <%= f.label :course_name, 'Course Name' %>
+		  	  <br>
+			  <%= f.text_field :course_name %>
+			  <br>
+			  <%= f.label :course_proposer_name, 'Course Proposer Name' %>
+			  <br>
+                          <%= f.text_field :course_proposer_name %>
+			  <br>
+			  <%= f.label :course_instructor_name, 'Course Instructor Name' %>
+			  <br>
+                          <%= f.text_field :course_instructor_name %>
+			  <br>
+			  <%= f.label :credits, 'Credits' %>
+			  <br>
+                          <%= f.text_field :credits %>
+			  <br>
+			  <%= f.label :semester, 'Semester' %>
+			  <br>
+                          <%= f.text_field :semester %>
+			  <br>
+			  <%= f.label :course_description, 'Course Description' %>
+			  <br>
+                          <%= f.text_field :course_description %>
+			  <br>
+			  <%= f.label :course_content, 'Course Content' %>
+			  <br>
+			  <%= f.text_field :course_content %>
+			  <br>
+			  <%= f.label :text_and_references, 'Text and References' %>
+  			  <br>
+                          <%= f.text_field :text_and_references %>
+			  <br>
+			  <%= f.submit "Update" %>
+		<% end %>
+	  </div>
+  </div>
