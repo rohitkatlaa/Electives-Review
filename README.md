@@ -14,14 +14,16 @@ This web application which I have designed is to help students to select their e
 		user.password="sample"<br />
 		user.password_confirmation="sample"<br />
 		user.save!<br />
-	After entering the required data run the following command in the terminal<br />
+	After entering the required data run the following command in the terminal<br /><br />
 	```
 	rake db:seed
 	```
+	<br /><br />
 	This will create the user.<br />
 	In the app/application.yml file enter the gmail user name and password of the head of that institute to send mails from this respective mail to other user.<br />
-	Once this is done run the following command to test the application<br />
+	Once this is done run the following command to test the application<br /><br />
 	```
 	rails server
 	```
+	<br /><br />
 	Open your browser and type http://localhost:3000/ and login to create electives.
