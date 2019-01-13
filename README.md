@@ -8,7 +8,7 @@ This web application which I have designed is to help students to select their e
 	When the application  is downloaded it's database is fresh without any data.So inorder to create the first user one has to seed the database.<br />
 	In the db/seeds.rb file there is a commented user.Fill in the required data and uncomment it.<br />
 	Sample:<br />
-		&nbspuser=User.new<br />
+		user=User.new<br />
 		user.user_name="sample"<br />
 		user.email="sample@sample.com"<br />
 		user.password="sample"<br />
